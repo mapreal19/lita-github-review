@@ -1,7 +1,8 @@
 # lita-reviewer-lotto
 
 [![Build Status](https://travis-ci.org/mapreal19/lita-reviewer-lotto.png?branch=master)](https://travis-ci.org/mapreal19/lita-reviewer-lotto)
-[![Coverage Status](https://coveralls.io/repos/mapreal19/lita-reviewer-lotto/badge.png)](https://coveralls.io/r/mapreal19/lita-reviewer-lotto)
+[![Coverage Status](https://coveralls.io/repos/github/mapreal19/lita-reviewer-lotto/badge.svg?branch=master)](https://coveralls.io/github/mapreal19/lita-reviewer-lotto?branch=master)
+
 
 TODO: Add a description of the plugin.
 
