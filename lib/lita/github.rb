@@ -1,7 +1,7 @@
 module Lita
   module Github
     class << self
-      def add_comment(repository, pull_request, message)
+      def add_comment(repository, number, message)
       end
     end
   end
