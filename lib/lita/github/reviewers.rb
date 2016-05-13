@@ -10,8 +10,8 @@ module Lita
         @collection = RandomReviewers.get
       end
 
-      def empty?
-        @collection.empty?
+      def present?
+        !@collection.empty?
       end
 
       def to_s

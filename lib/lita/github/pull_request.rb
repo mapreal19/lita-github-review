@@ -3,14 +3,14 @@ require_relative '../json_helper'
 module Lita
   module Github
     class PullRequest
-      VALID_ACTION = 'opened'.freeze
+      OPEN = 'opened'.freeze
 
       def initialize(request)
         @body = Lita::JsonHelper.load(request.body)
       end
 
       def open?
-        action != VALID_ACTION
+        action == OPEN
       end
 
       def number

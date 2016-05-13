@@ -5,10 +5,10 @@ module Lita
                   :number,
                   :message
 
-      def initialize(pull_request, reviewers)
-        @repository = pull_request.repository
-        @number = pull_request.number
-        @message = build_message(reviewers)
+      def initialize(comment_data)
+        @repository = comment_data.repository
+        @number = comment_data.number
+        @message = build_message(comment_data.reviewers)
       end
 
       private
