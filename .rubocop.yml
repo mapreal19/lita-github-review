@@ -1,0 +1,11 @@
+require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.1
+  DisplayCopNames: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/FileName:
+  Enabled: false
