@@ -5,6 +5,8 @@ module Lita
     class ReviewerLotto < Handler
       PR_ROUTE = '/pull_requests/new'.freeze
 
+      config :reviewers
+
       http.post PR_ROUTE, :new_pull_request
 
       def new_pull_request(request, _response)

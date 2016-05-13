@@ -7,7 +7,7 @@ module Lita
       SEPARATOR = ', '.freeze
 
       def initialize
-        @collection = RandomReviewers.get
+        @collection = RandomReviewers.get(pool)
       end
 
       def present?
@@ -16,6 +16,12 @@ module Lita
 
       def to_s
         @collection.map { |reviewer| formatted(reviewer) }.join(SEPARATOR)
+      end
+
+      private
+
+      def pool
+        Lita.config.handlers.reviewer_lotto.reviewers
       end
 
       def formatted(reviewer)
