@@ -1,3 +1,4 @@
+require_relative '../github'
 require_relative '../github/new_pull_request'
 
 module Lita
@@ -5,7 +6,8 @@ module Lita
     class ReviewerLotto < Handler
       PR_ROUTE = '/pull_requests/new'.freeze
 
-      config :reviewers
+      config :reviewers, type: Array
+      config :github_token, type: String
 
       http.post PR_ROUTE, :new_pull_request
 
