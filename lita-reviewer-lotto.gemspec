@@ -3,10 +3,10 @@ Gem::Specification.new do |spec|
   spec.version       = '0.1.0.alpha'
   spec.authors       = ['Mario Perez']
   spec.email         = ['mapreal19@gmail.com']
-  spec.description   = 'TODO: Add a description'
-  spec.summary       = 'TODO: Add a summary'
-  spec.homepage      = 'TODO: Add a homepage'
-  spec.license       = 'TODO: Add a license'
+  spec.description   = 'Add a description'
+  spec.summary       = 'Add a summary'
+  spec.homepage      = 'https://github.com/mapreal19/lita-reviewer-lotto'
+  spec.license       = 'MIT'
   spec.metadata      = { 'lita_plugin_type' => 'handler' }
 
   spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
