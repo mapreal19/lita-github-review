@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Lita::Handlers::ReviewerLotto, lita_handler: true do
+describe Lita::Handlers::GithubReview, lita_handler: true do
   describe '#new_pull_request' do
     def mock_reviewers(reviewers)
       allow(Lita::RandomReviewers).to receive(:get).and_return(reviewers)

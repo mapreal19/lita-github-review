@@ -14,7 +14,7 @@ module Lita
       end
 
       def token
-        Lita.config.handlers.reviewer_lotto.github_token
+        Lita.config.handlers.github_review.github_token
       end
     end
   end

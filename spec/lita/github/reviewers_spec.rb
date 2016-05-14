@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Lita::Github::Reviewers do
   describe '#present?' do
     def mock_config_reviewers(reviewers)
-      msg = 'config.handlers.reviewer_lotto.reviewers'
+      msg = 'config.handlers.github_review.reviewers'
       allow(Lita).to receive_message_chain(msg) { reviewers }
     end
 

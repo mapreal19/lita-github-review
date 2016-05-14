@@ -1,17 +1,17 @@
-# lita-reviewer-lotto
+# lita-github-review
 
-[![Build Status](https://travis-ci.org/mapreal19/lita-reviewer-lotto.png?branch=master)](https://travis-ci.org/mapreal19/lita-reviewer-lotto)
-[![Coverage Status](https://coveralls.io/repos/github/mapreal19/lita-reviewer-lotto/badge.svg?branch=master)](https://coveralls.io/github/mapreal19/lita-reviewer-lotto?branch=master)
+[![Build Status](https://travis-ci.org/mapreal19/lita-github-review.png?branch=master)](https://travis-ci.org/mapreal19/lita-github-review)
+[![Coverage Status](https://coveralls.io/repos/github/mapreal19/lita-github-review/badge.svg?branch=master)](https://coveralls.io/github/mapreal19/lita-github-review?branch=master)
 
 
 TODO: Add a description of the plugin.
 
 ## Installation
 
-Add lita-reviewer-lotto to your Lita instance's Gemfile:
+Add lita-github-review to your Lita instance's Gemfile:
 
 ``` ruby
-gem "lita-reviewer-lotto"
+gem "lita-github-review"
 ```
 
 ## Configuration

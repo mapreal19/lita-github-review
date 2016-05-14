@@ -21,7 +21,7 @@ module Lita
       private
 
       def pool
-        Lita.config.handlers.reviewer_lotto.reviewers
+        Lita.config.handlers.github_review.reviewers
       end
 
       def formatted(reviewer)

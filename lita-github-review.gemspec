@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
-  spec.name          = 'lita-reviewer-lotto'
+  spec.name          = 'lita-github-review'
   spec.version       = '0.1.0.alpha'
   spec.authors       = ['Mario Perez']
   spec.email         = ['mapreal19@gmail.com']
   spec.description   = 'Add a description'
   spec.summary       = 'Add a summary'
-  spec.homepage      = 'https://github.com/mapreal19/lita-reviewer-lotto'
+  spec.homepage      = 'https://github.com/mapreal19/lita-github-review'
   spec.license       = 'MIT'
   spec.metadata      = { 'lita_plugin_type' => 'handler' }
 
