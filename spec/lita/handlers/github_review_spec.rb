@@ -3,14 +3,21 @@ require 'spec_helper'
 describe Lita::Handlers::GithubReview, lita_handler: true do
   describe '#new_pull_request' do
     def mock_reviewers(reviewers)
-      allow(Lita::RandomReviewers).to receive(:get).and_return(reviewers)
       allow(Lita::Github).to receive(:add_comment)
+
+      msg = 'config.handlers.github_review.reviewers'
+      allow(Lita).to receive_message_chain(msg) { reviewers }
+
+      allow(Lita::RandomReviewers).to receive(:get).and_return(reviewers)
     end
 
     context 'when action is not "opened"' do
       it 'does nothing' do
         mock_reviewers(%w(Mario Juan))
-        payload = { action: 'edited' }.to_json
+        payload = {
+          action: 'edited',
+          pull_request: { user: { login: 'Ramon' } }
+        }.to_json
 
         http.post('/pull_requests/new', payload)
 
@@ -23,9 +30,8 @@ describe Lita::Handlers::GithubReview, lita_handler: true do
         {
           action: 'opened',
           number: pr_number,
-          repository: {
-            full_name: repository
-          }
+          pull_request: { user: { login: 'Ramon' } },
+          repository: { full_name: repository }
         }.to_json
       end
 

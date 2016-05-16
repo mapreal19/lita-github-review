@@ -13,6 +13,10 @@ module Lita
         action == OPEN
       end
 
+      def author
+        body[:pull_request][:user][:login]
+      end
+
       def number
         body[:number]
       end

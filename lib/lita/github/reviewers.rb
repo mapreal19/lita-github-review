@@ -6,8 +6,8 @@ module Lita
       PREFIX = '+@'.freeze
       SEPARATOR = ', '.freeze
 
-      def initialize
-        @collection = RandomReviewers.get(pool)
+      def initialize(author)
+        @collection = RandomReviewers.get(reviewers(author))
       end
 
       def present?
@@ -19,6 +19,10 @@ module Lita
       end
 
       private
+
+      def reviewers(author)
+        pool - [author]
+      end
 
       def pool
         Lita.config.handlers.github_review.reviewers

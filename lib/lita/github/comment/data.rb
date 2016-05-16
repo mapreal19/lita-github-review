@@ -6,7 +6,7 @@ module Lita
 
         def initialize(request)
           @pull_request = PullRequest.new(request)
-          @reviewers = Reviewers.new
+          @reviewers = Reviewers.new(@pull_request.author)
         end
 
         def invalid?
