@@ -6,8 +6,8 @@ module Lita
     class GithubReview < Handler
       PR_ROUTE = '/pull_requests/new'.freeze
 
-      config :reviewers, type: Array
-      config :github_token, type: String
+      config :reviewers, type: Array, required: true
+      config :github_token, type: String, required: true
 
       http.post PR_ROUTE, :new_pull_request
 
